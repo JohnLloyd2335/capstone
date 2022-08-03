@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Immunization;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Vaccine;
 
 class HomeController extends Controller
 {
@@ -25,7 +27,9 @@ class HomeController extends Controller
     public function dashboard()
     {
         $user_rows = User::count();
-        return view('dashboard', compact('user_rows'));
+        $vaccine_rows = Vaccine::count();
+        $immunization_rows = Immunization::count();
+        return view('dashboard', compact('user_rows','vaccine_rows','immunization_rows'));
     }
 
     

@@ -13,9 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('vaccines', function (Blueprint $table) {
-            $table->unsignedBigInteger('vaccine_category_id');
-            $table->foreign('vaccine_category_id')->references('id')->on('vaccine_categories')->onDelete('cascade')->onUpdate('cascade');
+        Schema::create('immunization_categories', function (Blueprint $table) {
+            $table->id();
+            $table->string('immunization_category_name');
+            $table->timestamps();
         });
     }
 
@@ -26,8 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('vaccines', function (Blueprint $table) {
-            $table->dropColumn('vaccine_category_id');
-        });
+        Schema::dropIfExists('immunization_categories');
     }
 };

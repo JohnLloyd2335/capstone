@@ -23,7 +23,7 @@
                       <div class="col mr-2">
                           <div class="text-xs font-weight-bold text-light text-uppercase mb-1">
                               Vaccines</div>
-                          <div class="text-light h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                          <div class="text-light h5 mb-0 font-weight-bold text-gray-800">{{ $vaccine_rows }}</div>
                       </div>
                       <div class="col-auto pr-5">
                           <i class="fas fa-syringe fa-2x text-gray-300 border rounded bg-info p-2"></i>
@@ -41,7 +41,7 @@
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-light text-uppercase mb-1">
                             Immunizations</div>
-                        <div class="text-light h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                        <div class="text-light h5 mb-0 font-weight-bold text-gray-800">{{ $immunization_rows }}</div>
                     </div>
                     <div class="col-auto pr-5">
                         <i class="fas fa-user-shield fa-2x text-gray-300 border rounded bg-success p-2"></i>

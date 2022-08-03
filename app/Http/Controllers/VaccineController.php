@@ -17,7 +17,7 @@ class VaccineController extends Controller
     {
         $vaccine_categories = VaccineCategory::all();
         $vaccines = Vaccine::with('vaccine_category')->get();
-        return view('vaccines.vaccine', compact('vaccine_categories','vaccines'));
+        return view('vaccine', compact('vaccine_categories','vaccines'));
     }
 
     /**

@@ -133,11 +133,11 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Immunization Category:</h6>
-                            <a class="collapse-item" href="buttons.html">Infant</a>
-                            <a class="collapse-item" href="cards.html">School Aged Children</a>
-                            <a class="collapse-item" href="cards.html">Adult</a>
-                            <a class="collapse-item" href="cards.html">Pregnant</a>
-                            <a class="collapse-item" href="cards.html">Senior Citizen</a>
+                            <a class="collapse-item" href="{{ route('infant_immunizations.index') }}">Infant</a>
+                            <a class="collapse-item" href="{{ route('school_aged_immunizations.index') }}">School Aged Children</a>
+                            <a class="collapse-item" href="{{ route('pregnant_immunizations.index') }}">Pregnant</a>
+                            <a class="collapse-item" href="{{ route('adult_immunizations.index') }}">Adult</a>
+                            <a class="collapse-item" href="{{ route('senior_citizen_immunizations.index') }}">Senior Citizen</a>
                         </div>
                     </div>
                 </li>
@@ -199,7 +199,7 @@
                 </div>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link" href="{{ route('archives.index') }}">
                         <i class="fas fa-archive"></i>
                         <span>Archive</span></a>
                 </li>
@@ -449,6 +449,7 @@
                     </nav>
                     <!-- End of Topbar -->
     
+                    <span id='page-top'></span>
                     
                     @yield('content')
                 
